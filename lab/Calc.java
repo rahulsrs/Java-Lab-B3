@@ -6,11 +6,11 @@ public class Calc {
 	public static void main(String args[]) {
 		Scanner scan = new Scanner(System.in);
 		
-		int a,b;
+		Double a,b;
 		System.out.println("Enter Operand 1 ");
-		a = scan.nextInt();
+		a = scan.nextDouble();
 		System.out.println("Enter Operand 2 ");
-		b = scan.nextInt();
+		b = scan.nextDouble();
 		System.out.print("Enter the operator for the operation ");
 		char op = scan.next().charAt(0);
 		

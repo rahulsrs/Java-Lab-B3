@@ -57,14 +57,11 @@ public class transpose{
 		System.out.println("Printing Even array");
 		for(int i=0;i<even.length;i++) {
 			System.out.print(even[i] + " ");
-			System.out.println();
-			
 		}
+		System.out.println();
 		System.out.println("Printing Odd array");
 		for(int i=0;i<even.length;i++) {
-			System.out.print(odd[i] + " ");
-			System.out.println();
-			
+			System.out.print(odd[i] + " ");	
 		}
 		System.out.println();
 	}

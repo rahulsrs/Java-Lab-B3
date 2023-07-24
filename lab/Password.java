@@ -22,7 +22,7 @@ public class Password {
 		System.out.println("Enter your name");
 		String name = scan.nextLine();
 		int rem,sum=0;
-		char sym[] = {'!','@','#','$','%','^','&','&','*','(',')'};
+		char sym[] = {'!','@','#','$','%','^','&','*','(',')'};
 		while(word.room%10!=0) {
 			rem = word.room%10;
 			sum += rem;

@@ -1,7 +1,7 @@
 package matrix;
 import java.util.Scanner;
 public class SquareInMat {
-	public static void main(String artgs[]) {
+	public static void main(String args[]) {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Enter size of square matrix ");
 		int n = scan.nextInt();
