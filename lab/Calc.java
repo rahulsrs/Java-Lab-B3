@@ -1,36 +1,43 @@
-	package lab;
+package lab;
 
-import java.util.Scanner;
+class Node
+{
+    int data;
+    Node left, right;
+  
+    Node(int item)
+    {
+        data = item;
+        left = right;
+    }
+}
+  
+class BinaryTree
+{
+    Node root;
+  
+    int diff(Node node)
+    {
 
-public class Calc {
-	public static void main(String args[]) {
-		Scanner scan = new Scanner(System.in);
-		
-		Double a,b;
-		System.out.println("Enter Operand 1 ");
-		a = scan.nextDouble();
-		System.out.println("Enter Operand 2 ");
-		b = scan.nextDouble();
-		System.out.print("Enter the operator for the operation ");
-		char op = scan.next().charAt(0);
-		
-		switch(op) {
-		case '+':
-			System.out.println(a+b);
-			break;
-		case '-':
-			System.out.println(a-b);
-			break;
-		case '*':
-			System.out.println(a*b);
-			break;
-		case '/':
-			System.out.println(a/b);
-			break;
-		default:
-			System.out.println("Invalid input");
-			
-		}
-	
-	}
+        if (node == null)
+            return 0;
+
+        return node.data - diff(node.left) - diff(node.right);
+    }
+    public static void main(String args[])
+    {
+        BinaryTree tree = new BinaryTree();
+        tree.root = new Node(5);
+        tree.root.left = new Node(2);
+        tree.root.right = new Node(6);
+        tree.root.left.left = new Node(1);
+        tree.root.left.right = new Node(7);
+        tree.root.left.right.left = new Node(2);
+        tree.root.right.right = new Node(1);
+        tree.root.right.right.right = new Node(8);
+        tree.root.right.right.left = new Node(9);
+        System.out.println(tree.diff(tree.root) + 
+                                             " is the required difference");
+  
+    }
 }

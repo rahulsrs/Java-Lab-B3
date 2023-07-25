@@ -1,10 +1,13 @@
 package lab;
-
+import java.util.*;
 public class Pattern {
 	public static void main(String args[]) {
-		int i=0,j=0,n=4;
-		for(i=0;i<=n;i++){
-			for(j=0;j<2*n+1;j++){
+		Scanner sc = new Scanner(System.in);
+		int i=0,j=0,n;
+		System.out.println("Enter the level");
+		n = sc.nextInt();
+		for(i=0;i<=n-1;i++){
+			for(j=0;j<2*n;j++){
 				if(j>n+i||j < n-i) {
 					System.out.print(" ");
 				}
